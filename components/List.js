@@ -1,4 +1,4 @@
-import { View, Text, StyleSheet } from "react-native";
+import { View, Text, Image, StyleSheet } from "react-native";
 
 export default function List(props) {
   return (
@@ -7,6 +7,7 @@ export default function List(props) {
         {props.country.name.common}
       </Text>
       <Text style={(styles.text, styles.capital)}>{props.country.capital}</Text>
+      <Image style={styles.img} source={{ uri: props.country.flags.png }} />
     </View>
   );
 }
@@ -30,4 +31,9 @@ const styles = StyleSheet.create({
   },
 
   capital: {},
+
+  img: {
+    width: 100,
+    height: 50,
+  },
 });

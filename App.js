@@ -13,7 +13,6 @@ export default function App() {
       .then((res) => res.json())
       .then((res) => {
         setCountries(res);
-        console.log("RES", countries);
       });
   }, []);
 
